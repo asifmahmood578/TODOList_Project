@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <!-- using fontawesome for icons --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <!-- extract css link from ex.ejs and attached to here -->
+    <%- style %>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Include header -->
+        <%- include('header'); %>
+        
+        <!-- Main container start -->
+        <main id="main-container">
+            <!-- contain variable parts -->
+            <%- body %>
+        </main>
+        <!-- Main Container ends -->
+    </div>
+
+    <!-- Extract script link from ex.ejs and attached to here -->
+    <%- script %>
+</body>
+</html>
